@@ -1,4 +1,4 @@
-package topCoderV1dot1;
+package TopCoder;
 
 public class ChristmasTreeDecorationDiv2 {
 

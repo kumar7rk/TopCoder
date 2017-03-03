@@ -1,4 +1,4 @@
-package topCoderV1dot1;
+package TopCoder;
 
 import projectEulerV1dot1.Library;
 

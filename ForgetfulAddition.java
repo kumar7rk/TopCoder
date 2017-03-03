@@ -1,4 +1,4 @@
-package topCoderV1dot1;
+package TopCoder;
 
 import icsV1dot1.Time;
 import static java.lang.Math.*;

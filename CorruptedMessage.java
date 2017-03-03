@@ -1,4 +1,4 @@
-package topCoderV1dot1;
+package TopCoder;
 
 import java.util.HashMap;
 import java.util.Iterator;
