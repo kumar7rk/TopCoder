@@ -3,12 +3,13 @@ package TopCoder;
 public class SafeBetting {
 
 	public static void main(String[] args) {
-		int a = 1, b = 2, c = 999;
-		System.out.println(minRounds(a,b,c));
+		int a = 15, b = 20, c = 48;
+		SafeBetting s = new SafeBetting();
+		System.out.println(s.minRounds(a,b,c));
 
 	}
 
-	private static int minRounds(int a, int b, int c) {
+	public int minRounds(int a, int b, int c) {
 		int B = 0;
 		int bet_amount = 0;
 		while (b<c) {
