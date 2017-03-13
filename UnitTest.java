@@ -54,4 +54,24 @@ public class UnitTest {
 		assertEquals(746, MagicSubset.findBest(new int []{-38, 4, 34, 32, 37, -30, -13, -37, 27, 43, 36, -38, -26, 41, -22, 35, 49, 46, -17, 14, -41, -44, 8, 24, -35, 6, 36, -45, 38, 16, -30, -49, 13, -5, -28, 19, 9, 1, 12, -41, 19, 21, 5, 10, 18, -17, -6, 43, 50, -6}	));
 		assertEquals(506, MagicSubset.findBest(new int []{24, -17, 16, 3, -7, 41, -31, -25, 46, -41, -37, -2, 3, -17, 14, -4, 12, 29, -38, -29, -26, 45, -25, 0, -46, 49, -21, 15, 1, 34, 48, 13, 33, -25, 20, 40, 44, -29, -1, -49}	));
 		}
+
+	
+	@Test
+	public void testIsCanPronounce() {
+		new Pronunciation();
+		assertEquals("", Pronunciation.canPronounce(new String[]{"All", "of", "these", "are", "not", "difficult"}	));
+		assertEquals("REALLY", Pronunciation.canPronounce(new String[]{"The", "word", "REALLY", "is", "really", "hard"}	));
+		assertEquals("", Pronunciation.canPronounce(new String[]{"AA", "Aa", "aA", "aa", "EE", "ee", "Ee", "eE", "Ii", "iI", "II", "ii", "OO", "oo", "Oo", "oO", "UU", "Uu", "uU", "uu"}	));
+		assertEquals("alsoimpossibletopronounce", Pronunciation.canPronounce(new String[]{"Yumm", "yoop", "buy", "SAY", "yy", "TY", "YAYO", "alsoimpossibletopronounce", "reallydifficult"}	));
+		assertEquals("eJoi", Pronunciation.canPronounce(new String[]{"OcTOvmoomtEEE", "AjUmgoLVeeemIIIIFoobw", "LAAbuuuuVfohBETeeejaaaaHv", "OPenifXEEEkeXEEEzxIIqzuuuteemVIIII", "xbIIIIxIIIsuQgooZOqDuSiiii", "opUUUxEEEETEEEEqVuriiiibUUUXtUUU", "ajQooSINPuuuunEjPaaaj", "pxEEE", "oBxaaaaDOOBuuugooJcoooYeMpIIIIqGiiiyUUb", "hQEEEVUUUCiiPugHAASJEEEEH", "eJoi"}	));
+		assertEquals("AxUiUUQeeePf", Pronunciation.canPronounce(new String[]{"sjuuuu", "qxOOOdLap", "UNCooNAAAACiiiTD", "JFUCEtOPAAAAddiiiiLipuCYiiii", "AKsOOOOsAlFoooswiiwIIItIIVoooovFEE", "LxOwAANAPOOVqUUhVuuuufIY", "aDMeeSCOOOOKXOOzzUUM", "Vxooorpiiii", "OgDaaatuuuutuuuxDuuuuGaaaamHIIBjaDII", "ogAASUXOOOOYOOOOwoooJgiisUnnUfc", "adjEMJIIItWUUUYCeeeeZ", "eSAAANdoVqeWgUUUS", "lUUUqEEEHiiibiiiicakv", "aQee", "erPIIIIL", "RwAAAAqJagDOOOOxRAAAXICUUUUhtObCEEEV", "hsUUURPIIIquuuSmoooSSAMoooowK", "BSUUUWQ", "YjOOOOWOpb", "DCI", "iDooooJoooohXOOOCAMaahhoooHeeeeCDomUUUHfEv", "KgeefuuuubaaaTbUUUUt", "TaaaQdoopbuPuNrAAAA", "KnAAAlavOteyBeeeRiiziFpIJKooooJFaBAAAlx", "yUUURBafGuuuZyuFMeeGQeejV", "UTeeWJiiiiBZooooWUsGuuuGDEEEDyeeCwUUUU", "IsIIVvaaakDeepOOOO", "rooJmuGaZUUUykaaaP", "UPGIIIIWUqFAAATtoozZUUUU", "NdeeBIIIINuCpaafeeeeX", "QCiiVBIIIpj", "AduuuqEEEEsUUUgIIIMIIIIZItzoooo", "Ree", "AlziiikiiSkuuuuJpuuuuLX", "AxUiUUQeeePf", "TyEEqlAARObLEDxOheeesIIl", "iLjAAAAMoooWBOOOw"}	));
+		assertEquals("", Pronunciation.canPronounce(new String[]{"AyGoocoooNXOOOOTqaNGeeeeD", "oKVUUGBaaVIIIxiii", "upeffUUDv", "Urq", "rquuuuYAAAAhaaVEEEEcm", "QdOCMiizdidUUUU", "AfyOOOOrooooHfeeeR", "E", "PIvtooojUUUUpooPeeewAAzjiipCuuFuuufooof", "hLoFAHUUUsLoooBIIIfiiiicGAAAArvUUUU", "uNuhEEEcYELY", "CuuuuRNeeeQiiimWiiiiwUUTCIIlEEEElwEDbuu", "uMiCjiiiVEEEEhIIIID", "iXiicCUUUjteeelaaaJyIIQEEEzZaFkULoooo", "OxVIIIInOOOwEEEEYEEBEEEEpVago", "lHeeTcibeeeeZCaBiiikP", "ZbaQKIPVOOOVLuuuuFiiiicKiPK", "SsasAmiiiVOOOOsezJeeeejtePb", "KUUUqeeCUUUUSi", "wAWUUvAAApOODdaaaaTc", "armEEEE", "ilaaRIIIIYeeexSUUUUYOOO", "IZIIIIKriyEEEEfxEEEETAARlUUUUVaqGooooxnuwB", "aMJOOgV", "vFiiiVUUUMhUCQ", "RiiiiSiiiiZiiiiNgeeeex", "hIcQuKfAAAALIIIpaaaaJOOOgoooJaaTIMKEKE", "GuuuuCAAARaaaQwAAAmGuuuunAAAVquuuHJO"}	));
+		assertEquals("igEEEEJiiiiRIIIIgOOgSIIpifkfOOOy", Pronunciation.canPronounce(new String[]{"kAAAAnIbooHPIIIIzx", "EREEEZIIwoooChookUfTIpuuYD", "izQOOOO", "bOOg", "AQMIIItoooofqaYlejeeeeGZEFaaaa", "ytOOOhAABTUUUSOOOVVIIIIY", "ACuuuuvsUSoTinDiiiq", "BuNiii", "ErmUUUUnEETduuuyHuuuumUUUUYipgOOs", "iVJuudfURbUUUURDOOOOk", "SiiiFyUUhOhFetR", "XUUUUyWeevyIIII", "eDAAkaaaaNWOOOPiiiNkIHr", "avIIIFxiiiiXRiiiifXUUUjaaaaqz", "pOOOOjOOvceeeemEEEEqIIMZiiiqfuuuuVUUUv", "igEEEEJiiiiRIIIIgOOgSIIpifkfOOOy", "TAAAr", "SooXiqmaaaa"}	));
+		assertEquals("PhinoodooiHdeeeetTuuyiisuFvUUUUzLeeebuuy", Pronunciation.canPronounce(new String[]{"aCyoooJOOOO", "jOOOcmaaaayFEEEXuuXeLOOOcqEEEEmIIIvXuuuu", "YavAAFIIyIITJUU", "pAAAAVraavV", "yLaaaaRIIhaKFAAAAwFuHxeevuupLUUUUQIIIIFboooH", "epPIWNOOOOQvoHOOOOPehIIBEEEErkiiiip", "OVuWuuuveeeebFIB", "aTUUUROsEEEhnUKnIIIIDz", "UQyoSUUNPeeeejAfWoGaaaHUBxIIIIz", "ORVOVMiiikFiiyqaaaak", "OvliHIIXmAcoofuuuumiiif", "oPELARPAAAAKhEZAAAfkEZaaTr", "PhinoodooiHdeeeetTuuyiisuFvUUUUzLeeebuuy"}	));
+		assertEquals("preaogative", Pronunciation.canPronounce(new String[]{"irresistable", "preaogative", "uttermost", "importance"}	));
+		assertEquals("layhuubiPXAdbucAGmmm", Pronunciation.canPronounce(new String[]{"DJiiiKooCEEEkIIItDuuuD", "iyfoooqMiiTleegIyUUUf", "HaaBIIIILUG", "layhuubiPXAdbucAGmmm"}	));
+		assertEquals("AAAAAAAAAAAAAAaarggghh", Pronunciation.canPronounce(new String[]{"a", "Aa", "aaa", "AAaA", "AAAAA", "aAAaAA", "aaaaaaaaaaaaaaaaaaaaaaAA", "aaaaaaaaaaaaaaaaaarg", "AAAAAAAAAAAAAAaarggghh"}	));
+		assertEquals("YYY", Pronunciation.canPronounce(new String[]{"THE", "LAST", "WORD", "IS", "YYY"}	));
+		
+	}
 }
