@@ -56,7 +56,7 @@ public class UnitTest {
 		}
 
 	
-	@Test
+	//@Test
 	public void testIsCanPronounce() {
 		new Pronunciation();
 		assertEquals("", Pronunciation.canPronounce(new String[]{"All", "of", "these", "are", "not", "difficult"}	));
@@ -74,4 +74,40 @@ public class UnitTest {
 		assertEquals("YYY", Pronunciation.canPronounce(new String[]{"THE", "LAST", "WORD", "IS", "YYY"}	));
 		
 	}
+
+	@Test
+	public void testIsComplete(){
+		new TriFibonacci();
+		assertEquals(6, TriFibonacci.complete(new int[] {1, 2, 3, -1}	));
+		assertEquals(110, TriFibonacci.complete(new int[] {10, 20, 30, 60, -1, 200}	));
+		assertEquals(510, TriFibonacci.complete(new int[] {10, 7, 10, 27, 44, 81, 152, 277, -1}	));
+		assertEquals(999985	, TriFibonacci.complete(new int[] {-1, 7, 8, 1000000}	));
+		assertEquals(3000000, TriFibonacci.complete(new int[]{1000000, 1000000, 1000000, -1}	 ));
+		assertEquals(37, TriFibonacci.complete(new int[] {1, 2, 3, 6, 11, 20, -1}	));
+		assertEquals(12, TriFibonacci.complete(new int[]{4, 3, 5, -1, 20, 37, 69, 126, 232, 427, 785, 1444, 2656, 4885}	 ));
+		assertEquals(6 , TriFibonacci.complete(new int[] {8, 9, -1, 23, 38, 67, 128, 233, 428, 789, 1450, 2667, 4906, 9023, 16596, 30525, 56144}	));
+		assertEquals(1, TriFibonacci.complete(new int[] {-1, 1, 1, 3, 5, 9, 17}	));
+		assertEquals(30, TriFibonacci.complete(new int[] {10, 20, -1, 60}	));
+		assertEquals(7, TriFibonacci.complete(new int[] {1, 2, -1, 10}	));
+		assertEquals(200, TriFibonacci.complete(new int[] {-1, 100, 200, 500}	));
+		assertEquals(1, TriFibonacci.complete(new int[] {1, 1, -1, 3}		));
+		assertEquals(4162, TriFibonacci.complete(new int[] {8, 1, 10, 19, 30, 59, 108, 197, 364, 669, 1230, 2263, -1, 7655, 14080, 25897, 47632, 87609, 161138}		));	
+		assertEquals(-1, TriFibonacci.complete(new int[] {1, 2, 3, 5, -1}	));
+		assertEquals(-1, TriFibonacci.complete(new int[] {1, 1, -1, 2, 3}	));
+		assertEquals(-1, TriFibonacci.complete(new int[] {1, 1, -1, 4, 10}	));
+		assertEquals(-1, TriFibonacci.complete(new int[] {-1, 4, 5, 7}	));
+		assertEquals(-1, TriFibonacci.complete(new int[]{1, 2, 10, -1, 11, 11, 11, 11}	 ));
+		assertEquals(-1, TriFibonacci.complete(new int[]{1, 2, 3, -1, 1000}	 ));
+		assertEquals(-1, TriFibonacci.complete(new int[] {-1, 1, 2, 33, 33}	));
+		assertEquals(-1, TriFibonacci.complete(new int[] {1, 2, 3, 5, -1, 6}		));
+		assertEquals(-1, TriFibonacci.complete(new int[] {5, 5, 6, -1, 3}		));
+		assertEquals(-1, TriFibonacci.complete(new int[] {100, 100, -1, 10}		));
+		assertEquals(-1, TriFibonacci.complete(new int[] 	{5, 4, 8, 16, 29, 54, -1}		));
+		assertEquals(-1, TriFibonacci.complete(new int[] 	{8, 2, 4, 14, 20, 38, 72, 130, 239, 442, 812, -1, 2748, 5054}		));
+		
+		assertEquals(1, TriFibonacci.complete(new int[] 	{-1, 2, 3, 6, 11}	));
+		
+		
+		
+		}
 }

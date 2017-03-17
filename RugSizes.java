@@ -19,7 +19,6 @@ public class RugSizes {
 				factors.add(i);
 			}
 		}
-//		System.out.println(factors);
 		for (int i = 0; i < factors.size(); i++) {
 			for (int j = i; j < factors.size(); j++) {
 				int ith = factors.get(i);
@@ -28,7 +27,6 @@ public class RugSizes {
 					continue;
 				}
 				int mul = ith*jth;
-//				System.out.println(ith+"*"+jth +"=" + mul);
 				if (mul == area) {
 					count++;
 				}
@@ -38,5 +36,4 @@ public class RugSizes {
 		
 		return count;
 	}
-
 }
