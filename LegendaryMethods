@@ -1,0 +1,14 @@
+// return the rank of the number srm 229
+public static int getRank( int[] scores, int newscore, int places ) {
+	        int greater = 0, lesser = 0, same = 0;
+	        for ( int i = 0; i < scores.length; ++i )
+	            if ( newscore > scores[ i ] )
+	                ++greater;
+	            else if ( newscore == scores[ i ] )
+	                ++same;
+	            else
+	                ++lesser;
+	        if ( lesser + same >= places )
+	            return -1;
+	        return lesser + 1;
+	    }
