@@ -54,9 +54,7 @@ public class UnitTest {
 		assertEquals(746, MagicSubset.findBest(new int []{-38, 4, 34, 32, 37, -30, -13, -37, 27, 43, 36, -38, -26, 41, -22, 35, 49, 46, -17, 14, -41, -44, 8, 24, -35, 6, 36, -45, 38, 16, -30, -49, 13, -5, -28, 19, 9, 1, 12, -41, 19, 21, 5, 10, 18, -17, -6, 43, 50, -6}	));
 		assertEquals(506, MagicSubset.findBest(new int []{24, -17, 16, 3, -7, 41, -31, -25, 46, -41, -37, -2, 3, -17, 14, -4, 12, 29, -38, -29, -26, 45, -25, 0, -46, 49, -21, 15, 1, 34, 48, 13, 33, -25, 20, 40, 44, -29, -1, -49}	));
 		}
-
-	
-	//@Test
+//	@Test
 	public void testIsCanPronounce() {
 		new Pronunciation();
 		assertEquals("", Pronunciation.canPronounce(new String[]{"All", "of", "these", "are", "not", "difficult"}	));
@@ -74,7 +72,6 @@ public class UnitTest {
 		assertEquals("YYY", Pronunciation.canPronounce(new String[]{"THE", "LAST", "WORD", "IS", "YYY"}	));
 		
 	}
-
 //	@Test
 	public void testIsComplete(){
 		new TriFibonacci();
@@ -109,7 +106,7 @@ public class UnitTest {
 		
 		}
 	
-	@Test
+//	@Test
 	public void isMinNumber(){
 		new SwappingDigits();
 		assertEquals("1491727554", SwappingDigits.minNumber("5491727514"));
@@ -134,5 +131,22 @@ public class UnitTest {
 		assertEquals("18326141480732117541253865198977", SwappingDigits.minNumber("78326141480732117541253865198971"));
 		assertEquals("139613437590740162597117122494746452", SwappingDigits.minNumber("539613437590740162597117122494746412"));
 		}
-	
+	@Test
+	public void isWinnings(){
+		new BlackjackWinner();
+		assertEquals(10, BlackjackWinner.winnings(10, 20, 0, 21, 0));
+		assertEquals(-26, BlackjackWinner.winnings(26, 21, 1, 21, 0));
+		assertEquals(150, BlackjackWinner.winnings(100, 25, 0, 21, 1));
+		assertEquals(-78, BlackjackWinner.winnings(78, 22, 0, 23, 0));
+		assertEquals(-20, BlackjackWinner.winnings(20, 21, 1, 21, 0));
+		assertEquals(0, BlackjackWinner.winnings(20, 21, 1, 21, 1));
+		assertEquals(30, BlackjackWinner.winnings(20, 21, 0, 21, 1));
+		assertEquals(-80, BlackjackWinner.winnings(80, 24, 0, 24, 0));
+		assertEquals(-68, BlackjackWinner.winnings(68, 17, 0, 27, 0));
+		assertEquals(-100, BlackjackWinner.winnings(100, 19, 0, 22, 0));
+		assertEquals(30, BlackjackWinner.winnings(20, 20, 0, 21, 1));
+		assertEquals(0, BlackjackWinner.winnings(2, 21, 1, 21, 1));
+		assertEquals(-10, BlackjackWinner.winnings(10, 25, 0, 25, 0));
+		
+		}
 }
