@@ -131,7 +131,7 @@ public class UnitTest {
 		assertEquals("18326141480732117541253865198977", SwappingDigits.minNumber("78326141480732117541253865198971"));
 		assertEquals("139613437590740162597117122494746452", SwappingDigits.minNumber("539613437590740162597117122494746412"));
 		}
-	@Test
+	//@Test
 	public void isWinnings(){
 		new BlackjackWinner();
 		assertEquals(10, BlackjackWinner.winnings(10, 20, 0, 21, 0));
@@ -147,6 +147,41 @@ public class UnitTest {
 		assertEquals(30, BlackjackWinner.winnings(20, 20, 0, 21, 1));
 		assertEquals(0, BlackjackWinner.winnings(2, 21, 1, 21, 1));
 		assertEquals(-10, BlackjackWinner.winnings(10, 25, 0, 25, 0));
+		
+		}
+
+	@Test
+	public void isFind(){
+		new SearchBox();
+		assertEquals(48, SearchBox.find("aaa aaa aaa aaa aaa aaa aaa aaa aaa aaa aaa aaa aa", "aa", "Y", 1));
+		assertEquals(17, SearchBox.find("All in all youre just another brick in the wall", "just", "Y", 17	));
+		assertEquals(9, SearchBox.find("bAab aaBaBa Ab aa abbb ab ba aaba aab Ba aba aa a", "Ba", "N", 8	));
+		assertEquals(7, SearchBox.find("bAab aaBaBa Ab aa abbb ab ba aaba aab Ba aba aa a", "Ba", "N", 6	));
+		assertEquals(-1, SearchBox.find("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAB", "N", 0	));
+		assertEquals(30, SearchBox.find("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB", "AAAAAAAAAAAAAAAAAAB", "N", 0	));
+		assertEquals(0, SearchBox.find("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Y", 0	));
+		assertEquals(-1, SearchBox.find("A", "C", "N", 0	));
+		assertEquals(-1, SearchBox.find(" abc", "abc", "Y", 5	));//
+		assertEquals(1, SearchBox.find(" abc", "abc", "Y", 0	));//
+		assertEquals(45, SearchBox.find("WWXY uoOXoy YXUXwwoWYwyWxuxWyUuxyXxy yyOUoWWWXX", "XX", "N", 33	));
+		assertEquals(-1, SearchBox.find("wXw wYwOyuyWW", "yWW", "Y", 6	));
+		assertEquals(-1, SearchBox.find("yXxWYoOWXWwwOOU O oXOwwx oWwxy OuyOUYYoYwWWwY ", "wwOOUOoXOwwxoWwx", "N", 6	));
+		assertEquals(10, SearchBox.find("wWyWWwoW OwXWWOOWyWOU", "wXW", "N", 3	));
+		assertEquals(-1, SearchBox.find("XXOxxYWYXUOYYxyoYOYoxOYXuuOyxxUUuXUYuxWWyXOXUxU ", "UUuXU", "N", 43));
+		assertEquals(-1, SearchBox.find("UW Xw uUoouXuxO", "o", "Y", 6	));
+		assertEquals(-1, SearchBox.find("OWUuWxYyywWuWUyxwXOWoU O", "yywWuWUyxwXOWoU", "N", 22	));
+		assertEquals(-1, SearchBox.find("abc", "d", "N", 1	));
+
+		assertEquals(-1, SearchBox.find("abctt rabc uabc", "abc", "Y", 0	));
+		assertEquals(5, SearchBox.find("abcd abc", "abc", "Y", 0	));
+		assertEquals(8, SearchBox.find("abc abc bc", "bc", "Y", 1	));
+		assertEquals(4, SearchBox.find("abc e", "e", "Y", 3	));
+		assertEquals(9, SearchBox.find("ab ba ab a", "a", "Y", 0	));
+		assertEquals(7, SearchBox.find("a abcd bcd", "bcd", "Y", 3	));
+		assertEquals(20, SearchBox.find("Teachers leave them kid", "kid", "Y", 1	));
+		assertEquals(31, SearchBox.find("Teachers leave them kids alone kid haha", "kid", "Y", 1	));
+		assertEquals(45, SearchBox.find("raising the somehadkj adfhkajdshfjkadfasdklj the", "the", "Y", 15	));
+		assertEquals(17, SearchBox.find("yes i am fool so oo you", "oo", "Y", 0	));
 		
 		}
 }

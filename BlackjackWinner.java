@@ -1,7 +1,5 @@
 package TopCoder;
 
-import static org.junit.Assert.assertEquals;
-
 public class BlackjackWinner{
 	public static void main(String[]args){
 		
