@@ -12,3 +12,20 @@ public static int getRank( int[] scores, int newscore, int places ) {
 	            return -1;
 	        return lesser + 1;
 	    }
+// return if the string is made of only your required characters srm 533 PikachuEasy
+public static String check1(String word)
+	  {
+	    while(word.length() > 0) {
+	      if(word.startsWith("pi") || word.startsWith("ka")) {
+	        word = word.substring(2);
+	        continue;
+	      } else if(word.startsWith("chu")) {
+	        word = word.substring(3);
+	        continue;
+	      }
+	      
+	      return "NO";
+	    }
+	    
+	    return "YES";  
+	  }
