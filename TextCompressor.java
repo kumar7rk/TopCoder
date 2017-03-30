@@ -1,28 +1,21 @@
 package TopCoder;
 
-import icsV1dot1.Time;
-
-public class Reppity{
-	public static void main(String[]args){
+public class TextCompressor {
+	public static void main(String [] args){
 		
-		String input =
-				"ABABA"
-				;
-		Time.startTime();
-		int res = longest(input);
+		String sourceText = "ABABA";
+		String res = longestRepeat(sourceText);
 		System.out.println(res);
-		Time.endTime();
-		
 	}
-	public static int longest(String input){
+	public static String longestRepeat(String sourceText){
 		
-		int x = input.length();
+		int x = sourceText.length();
 		int max = 0;
 		String maxS = "";
 		for(int i = 0;i<x-1;i++){
 			for(int j = i+1;j<x;j++){
-				String temp = input.substring(i,j);
-				if (overlapping(input, temp)) {
+				String temp = sourceText.substring(i,j);
+				if (overlapping(sourceText, temp)) {
 					if (max < temp.length()) {
 						max = temp.length();
 						maxS = temp;
@@ -30,15 +23,15 @@ public class Reppity{
 				}
 			}
 		}
-		System.out.println(maxS);
-		return max;
+		return maxS;
 	}
-	//checks overlapping and if the substring exists twice
+	// checks overlapping and if the substring exists twice
 	public static boolean overlapping(String input, String temp){
 		 int offset = 0, index = 0, indexTemp = 0;
 		 index = input.indexOf(temp, offset);
 		 offset = index + temp.length();
 		 indexTemp = input.indexOf(temp, offset);
+		 System.out.println(temp + " " +offset + " " + index + " " + indexTemp);
 		 if (indexTemp!=-1) {
 			return true;
 		}
