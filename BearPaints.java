@@ -13,8 +13,7 @@ public class BearPaints {
 		System.out.println(result);
 		Time.endTime();
 	}
-
-	private static long maxArea(int w, int h, long m) {
+	public static long maxArea(int w, int h, long m) {
 		long max = 0;
 		for (int i = w,count = 0; i >0 && count<10000 ; i--){
 			max = Math.max(Math.min(h,(m/i))*i, max);

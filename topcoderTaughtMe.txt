@@ -1,3 +1,5 @@
+SwimmersDelight
+
 Compute everything first
 don't compute one value depended on other value
 e.g. if a > 10 then compute b
