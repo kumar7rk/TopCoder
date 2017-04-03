@@ -1,0 +1,4 @@
+Compute everything first
+don't compute one value depended on other value
+e.g. if a > 10 then compute b
+instead if the motive is to find min/ max value check that and store it in a variable instead of overriding the value of the b over and over again
