@@ -2,6 +2,8 @@ package TopCoder;
 
 import java.util.Arrays;
 
+import icsV1dot1.Time;
+
 public class PeacefulLine {
 
 	public static void main(String[] args) {
@@ -11,13 +13,12 @@ public class PeacefulLine {
 	}
 
 	public static String makeLine(int[] x) {
-		int length = x.length/2;
-		Arrays.sort(x);
+		int length = (x.length+1)/2;
 		int []count = new int[25];
 		for (int i = 0; i < x.length; i++)
 			count[x[i]-1]++;
 		for (int i : count)
-			if ((x.length%2!=0 && i>length+1) || (x.length%2==0 && i>length)) return "impossible";
+			if (i>length) return "impossible";
 		return "possible";
 	}
 
