@@ -1,9 +1,5 @@
 package TopCoder;
 
-import java.util.Arrays;
-
-import icsV1dot1.Time;
-
 public class PeacefulLine {
 
 	public static void main(String[] args) {
