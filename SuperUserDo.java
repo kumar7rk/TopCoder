@@ -19,6 +19,5 @@ public class SuperUserDo {
 				hashSet.add(j);
 		return hashSet.size();
 	}
-	
 
 }
