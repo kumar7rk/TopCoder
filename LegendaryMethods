@@ -29,3 +29,47 @@ public static String check1(String word)
 	    
 	    return "YES";  
 	  }
+//	  return the largest reach ( how far the robot could go (either left of right)) replacing ? as required SRM 538
+	  public static int maxDistance (String program){
+		 System.out.println(program);
+	    int n = program.length();
+	    int pos = 0, d = 0;
+	    int ans = 0;
+	    for(int i=0;i<n;i++){
+	      
+	    	if (program.charAt(i)=='L')
+	        pos++;
+	      
+	    	if (program.charAt(i)=='R')
+	        pos--;
+	      
+	    	if (program.charAt(i)=='?')
+	        d++;
+	        ans = Math.max(ans,Math.abs(pos)+d);
+	        System.out.print(ans+ " " );
+	      }
+	    System.out.println();
+	      return ans;
+	  }
+// comparing two string, and comapring a string char by char (concept of reverse) SRM 713
+public String detect(String[] board) {
+    boolean v = true, h = true;
+    for(int i=0;i<board.length;i++){
+      if(!(new StringBuilder(board[i])).reverse().toString().equals(board[i])){
+        v = false; break;
+      }
+    }
+    for(int i=0;i<board[0].length();i++){
+      String x = "";
+      for(int j=0;j<board.length;j++)x += board[j].charAt(i);
+      if(!(new StringBuilder(x)).reverse().toString().equals(x)){
+        h = false; break;
+      }
+    }
+    if(v && h) return "Both";
+    if(v) return "Vertically symmetric";
+    if(h) return "Horizontally symmetric";
+    return "Neither";
+  }
+  
+	  

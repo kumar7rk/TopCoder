@@ -4,16 +4,16 @@ public class KitayutaMart2 {
 
 	public static void main(String[] args) {
 
-		int K = 160;
-		int T = 163680;
+		int K = 155;
+		int T = 79205	;
 		int res = numBought(K, T);
 		System.out.println(res);
 	}
 
 	public static int numBought(int K, int T) {
-		int res = K;
+		int res = 0;
 		int temp = 1;
-		for (int i = 1; ; i++) {
+		for (int i = 0; ; i++) {
 			temp = (int)Math.pow(2, i);
 			temp*=K;
 			res+=temp;
