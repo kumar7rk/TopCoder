@@ -4,12 +4,8 @@ public class FoxAndHandleEasy {
 
 	public static void main(String[] args) {
 
-		String S = 
-				"Ciel"
-				;
-		String T = 
-				"CCieliel"	
-				;
+		String S = "Ciel";
+		String T = "CCieliel";
 		String res = isPossible(S,T);
 		System.out.println(res);
 		
