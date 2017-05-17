@@ -13,8 +13,8 @@ public class MarbleNecklace {
 	public static String normalize(String necklace) {
 		StringBuffer buffer = new StringBuffer(necklace);
 		buffer.reverse();
-		String s = buffer.toString();
 		int length = necklace.length();
+		String s = buffer.toString();
 		String res = necklace;
 		ArrayList<String> arrayList = new ArrayList<>();
 		arrayList.add(necklace);
@@ -28,7 +28,6 @@ public class MarbleNecklace {
 		}
 
 		for (String string : arrayList) {
-			System.out.println(string);
 			if (string.compareTo(res)<0) {
 				res = string;
 			}
