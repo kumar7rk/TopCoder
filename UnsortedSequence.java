@@ -5,9 +5,7 @@ import java.util.Arrays;
 public class UnsortedSequence {
 
 	public static void main(String[] args) {
-		int[] s = 
-			{1, 2, 3, 3, 3, 3}	
-//		{2,8,5,1,10,5,9,9,3,10,5,6,6,2,8,2,10}
+		int[] s = {1, 2, 3, 3, 3, 3}	
 ;
 		int[] res = getUnsorted(s);
 		for (int i : res) System.out.print(i+ " ");
