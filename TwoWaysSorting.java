@@ -2,7 +2,9 @@ package TopCoder;
 
 public class TwoWaysSorting {
 	public static void main(String[] args) {
-		String[] stringList = {"abcdef", "bcdef", "cdef", "def", "ef", "f", "topcoder"};
+		String[] stringList = 
+			{"l", "ikuz", "rkarowluagylidigangqotntwhpolrvgw", "geudeuyjztapwekpdfnrgojgoibirtbemzychccopxsem", "zfdfowfrtylutqdkqoseernymcrrwnjppgxbrkbiesjqjhodno", "zfczbsippgcpfdigbztzedgbypefbypcutmtp", "zakoxt", "jourahqtczxatmcqaigbivigtw", "erxniziblcxysbarxkefywzrudid", "kligxogtotucgtxdfofl", "xpj", "fltikqahxqbyfpikaukayvgwedimcxhusfmfsznpxtvxlydfb", "kfiqmkwbqjuwipqcc", "ljkgsogcbitmkgmrkkogxj", "ifvudksrgjpy", "tqnksklnwazifcyrkfw", "mmhapopctvbtjdfszqfgtyvnylziutaeqxc", "chyklqgoljm", "zawuokqcuczggwnqmxhkgbiepnhrdxxhkbyi", "sqestyahzwgxdd", "bxbzsbzu", "swelcpomqjfrvbfojpgmbdzx", "lttkvcl", "vafyhulsaltibmscwmmmqohajwretdrdmpjacoqurv", "triuevrrdtvtortnhx", "nyxbuccsa", "exwbuzokeyimwmuhoibpooawsqfizpcqmbncotdb", "nsaanblewrciyluhprvcyqedjrplacaxawoctfc", "firuqpdmdzujrvpasliwhqogmlwmcrf", "bwryiwmicyzbappgbauvdcftdiutwnvddy", "xglfncezviqjhmakkqdhvvgxtcgxdjnrfhuatmextdwgedyi", "owbexmaajsfvhkhiarzaubh", "hbvjygbotkeofpasqobbaywtyfageksslasnwfsjm", "ezmzjaecpyitb", "fzrjjcjfig", "istnoxqdlwxkgwzbmdypwkxox", "ecenqcziyzquviffogfpajbsvkr", "oddohwgoevpkyglsonfmzfqgrnrxkygqamtrpoddloxouhl", "uwindmlalxytsxlissrwdklkopwzcf", "mifkavjirorfkepyjkoxmwaexgqgpeqcqsdaamdnvrrx", "pefvhfxxxjgqsrqsxlnllvwvajieenkwesewqrzzrsn", "lvibhpjhbdnfgjfdsftknfijqwnxb", "xiklwohgyahifbelchmsejwnklkxttgpxdxyes", "kpmvhtstgcgxjblqjgeqhbfqlpzpasbsbuasytevuruymw", "fgfmbuywkoczpna", "cjmtdwqzkrxbmuplkfrhn", "qhawn", "au", "pakovgzebahmopgi", "iuiqplzgfdwataqjxmkgyilswhmtoosx"}	
+		;
 		String res = sortingMethod(stringList);
 		System.out.println(res);
 	}
