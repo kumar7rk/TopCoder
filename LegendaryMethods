@@ -73,3 +73,29 @@ public String detect(String[] board) {
   }
   
 	  
+// move through an array exactly once each cell SRM 394
+	  	 public static int cellsVisited1(String[] x, int heightDifference)
+	  {
+	    int[] dx = {1,0,-1,0};
+	    int[] dy = {0,-1,0,1};
+	    boolean[][] v = new boolean[x.length][x[0].length()];
+	    int i = 0, j = 0, res = 1;o:
+	    while(true){
+	      v[i][j] = true;
+	      for(int d=0;d<4;++d){
+	        int ni = i+dx[d], nj = j+dy[d];
+	        if(ni<0||nj<0||ni>=x.length||nj>=x[0].length() || v[ni][nj])
+	          continue;
+	        int a = x[i].charAt(j) - '0';
+	        int b = x[ni].charAt(nj) - '0';
+	        if(Math.abs(a-b)>heightDifference)  continue;
+	        i=ni; j = nj;
+	        res++;
+	        continue o;
+	      }
+	      break;      
+	    }
+	    
+	    return res;
+	  }
+	  

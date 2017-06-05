@@ -1,5 +1,7 @@
 package TopCoder;
 
+import icsV1dot1.Time;
+
 public class MountainWalk {
 
 	public static void main(String[] args) {
@@ -36,34 +38,29 @@ public class MountainWalk {
 			boolean b3 = false;
 			boolean b4 = false;
 			c = areaMap[i].charAt(j);
-//			System.out.println((Math.abs((areaMap[i+1].charAt(j)-'0')- (c-'0'))));
 			if (i<n-1 &&((Math.abs((areaMap[i+1].charAt(j)-'0')- (c-'0')) <=heightDifference))
 					  && visited[i+1][j] == false) {
 				visited[i+1][j] = true;
 				i++;
 				b1 = true;
-				System.out.println("1");
 			}
 			else if (j>0 &&((Math.abs((areaMap[i].charAt(j-1)-'0')- (c-'0')) <=heightDifference))
 					  && visited[i][j-1] == false) {
 				visited[i][j-1] = true;
 				j--;
 				b2 = true;
-				System.out.println("2");
 			}
 			else if (i>0 &&((Math.abs((areaMap[i-1].charAt(j)-'0')- (c-'0')) <=heightDifference))
 					  && visited[i-1][j] == false) {
 				visited[i-1][j] = true;
 				i--;
 				b3 = true;
-				System.out.println("3");
 			}
 			else if (j<m-1 &&((Math.abs((areaMap[i].charAt(j+1)-'0')- (c-'0')) <=heightDifference))
 					  && visited[i][j+1] == false) {
 				visited[i][j+1] = true;
 				j++;
 				b4 = true;
-				System.out.println("4");
 			}
 			if (b1 == true||b2 == true||b3 == true||b4 == true) {
 				continue;
@@ -75,14 +72,11 @@ public class MountainWalk {
 		int count = 0;
 		for (boolean[] bs : visited) {
 			for (boolean b : bs) {
-//				System.out.println(b);
 				if (b== true) {
 					count++;
 				}
 			}
-//			System.out.println();
 		}
 		return count;
 	}
-
 }
