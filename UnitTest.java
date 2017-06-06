@@ -219,7 +219,7 @@ public class UnitTest {
 				
 	}
 	@SuppressWarnings("deprecation")
-	@Test
+	//@Test
 	public void testIsSortSerials() {
 		new SerialNumbers();
 		assertEquals(new String[]{"A", "ABCD", "Z321", "145C", "A910" }, SerialNumbers.sortSerials(new String []{"ABCD","145C","A","A910","Z321"}));
@@ -234,6 +234,24 @@ public class UnitTest {
 				SerialNumbers.sortSerials(new String []{"UADHC6412VD3XK964T17CRTVFKI5GIZ78ZST3HE", "VH5RA5EWIZ4QUY7A0EYW9D8XL06N3ZMHQRWFO", "EEQCRYA418GALD", "DFDB1EFDGDGS05ZO4ZR", "YEZZ23IK3QQCMV0O1WWN0XPB5M8KO54VA", "XER0JWHEAQ1QLBRFVA8NUUI7NN17", "RCP9P7HONE915DW6UIF58HI6PRJR96B6K", "UCDC90KKMMVJWXK15M5MX0H7QLQX0LXDQ81CO9BKVEB89INV", "Q3RUA0FCCNZ4XL5UPI3DZ1W1Q4OWIELD42", "1CKYJHFKVBD8GI9Z32WCMN9NYBV", "NL5AL05BNU7WBKB7Q00T2CDROPHVRZRQP9OUXW", "CW7SBVM80H", "K5BOET83ZI3MEXSWODN1GM81YCCL9PQ9YPF0TBUZA2PU2", "KQQDZQ5FRB34UT1L0V", "8FVBEG3KB2KO6V9V9CIDL00W5F9PJDSPC05BE", "MUODXKUIGUR3HQTVBI8I4JK5", "QWZ", "AN4BWVRPJ7E8LXN26BDLRLUTHQKSRHZTAK3T2HXQ90611ATM", "FZ7RDO0A4XHE2C7", "7CAECPMRLLRZ2AKIS6SO803ICSKA2D77U58", "I7VDVN1HY", "TYHYRSDEQ8YJ46NPD9SLOH423QKM", "6WV94O12SQOTJE82T334CQ0GB", "WI5NII58PL8DX3DA4LJ5J9LO9XWYZSHO3Q52R6U44DICGYYX", "0PV28WJ7BB49A92RQEP0ED2SFSKHXS8TG37VU40GJ64AW0J06", "LI9YUXDIMW8AOQHAFCEQ600U6PC23KV7E", "UNPOEVJS0I66", "6R3XOE2", "3C8PW6CMF2R0DIMG4TZI0OJ4BGE", "XLA6C5PBM5K4KY6O6NNG8ORMU3PP8ML4C9A6O", "IRLUZ9YT15LP0XXLRKXIWD", "XXLY3B2MI6EF8", "P4G2TJMNUL59VKMX3EPM", "2P37OL4S1LDKLEJ495OMYWNP7EGNLB411J5HHKUQ8WAGNQDNG", "CJET66L3MA7RLA696", "4LA675MRB", "9LYJ0A7ST8XA0NMHS2O8QAGLCSME", "5V71FAHEQF9MLLGQUAH", "P72", "U4GTDQPS994DT", "LD0EF4XULUWWML6BX2SDPFSRGLW1TMQSNI0FG3CT"}		));
 		assertEquals(new String[]{"A", "ABCD", "Z321", "145C", "A910" }, 
 				SerialNumbers.sortSerials(new String []{"ABCD","145C","A","A910","Z321"}));
+		
+	}
+	@Test
+	public void testIsMakeRope() {
+		new RopeString();
+		assertEquals("-.-...", RopeString.makeRope("..-..-"));
+		assertEquals("-.-", RopeString.makeRope("-.-"));
+		assertEquals("--.--.---.-..", RopeString.makeRope("--..-.---..--"));
+		assertEquals("--.--.--.-----.---.-....", RopeString.makeRope("--..-.---..--..-----.--."));
+		assertEquals("...", RopeString.makeRope("..."));
+		assertEquals("------------.--.---------------...", RopeString.makeRope("--.------------...---------------."));
+		assertEquals("----.--.---.", RopeString.makeRope("----.--.---."));
+		assertEquals("-------.---.---.-", RopeString.makeRope("-.---.-------.---"));
+		assertEquals("----.--.--.-------.-----.---.---.---.-.-.-.-.-.-..", RopeString.makeRope("--.-----.-------.-.-..--.-.-.-.-.---.----.---..---"));
+		assertEquals("-.-.-.-.............................", RopeString.makeRope(".-..-...................-...-......."));
+		assertEquals("--------------------------------.--.-------------.", RopeString.makeRope("--------------------------------.-------------.--."));
+		
+		assertEquals("--.---------.---------.---.-", RopeString.makeRope("--.---------.---.-.---------"));
 		
 	}
 }
