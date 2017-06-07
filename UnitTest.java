@@ -238,20 +238,20 @@ public class UnitTest {
 	}
 	@Test
 	public void testIsMakeRope() {
-		new RopeString();
-		assertEquals("-.-...", RopeString.makeRope("..-..-"));
-		assertEquals("-.-", RopeString.makeRope("-.-"));
-		assertEquals("--.--.---.-..", RopeString.makeRope("--..-.---..--"));
-		assertEquals("--.--.--.-----.---.-....", RopeString.makeRope("--..-.---..--..-----.--."));
-		assertEquals("...", RopeString.makeRope("..."));
-		assertEquals("------------.--.---------------...", RopeString.makeRope("--.------------...---------------."));
-		assertEquals("----.--.---.", RopeString.makeRope("----.--.---."));
-		assertEquals("-------.---.---.-", RopeString.makeRope("-.---.-------.---"));
-		assertEquals("----.--.--.-------.-----.---.---.---.-.-.-.-.-.-..", RopeString.makeRope("--.-----.-------.-.-..--.-.-.-.-.---.----.---..---"));
-		assertEquals("-.-.-.-.............................", RopeString.makeRope(".-..-...................-...-......."));
-		assertEquals("--------------------------------.--.-------------.", RopeString.makeRope("--------------------------------.-------------.--."));
+		new Ropestring();
+		assertEquals("-.-...", Ropestring.makerope("..-..-"));
+		assertEquals("-.-", Ropestring.makerope("-.-"));
+		assertEquals("--.--.---.-..", Ropestring.makerope("--..-.---..--"));
+		assertEquals("--.--.--.-----.---.-....", Ropestring.makerope("--..-.---..--..-----.--."));
+		assertEquals("...", Ropestring.makerope("..."));
+		assertEquals("------------.--.---------------...", Ropestring.makerope("--.------------...---------------."));
+		assertEquals("----.--.---.", Ropestring.makerope("----.--.---."));
+		assertEquals("-------.---.---.-", Ropestring.makerope("-.---.-------.---"));
+		assertEquals("----.--.--.-------.-----.---.---.---.-.-.-.-.-.-..", Ropestring.makerope("--.-----.-------.-.-..--.-.-.-.-.---.----.---..---"));
+		assertEquals("-.-.-.-.............................", Ropestring.makerope(".-..-...................-...-......."));
+		assertEquals("--------------------------------.--.-------------.", Ropestring.makerope("--------------------------------.-------------.--."));
 		
-		assertEquals("--.---------.---------.---.-", RopeString.makeRope("--.---------.---.-.---------"));
+		assertEquals("--.---------.---------.---.-", Ropestring.makerope("--.---------.---.-.---------"));
 		
 	}
 }
