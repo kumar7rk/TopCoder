@@ -1,7 +1,5 @@
 package TopCoder;
 
-import icsV1dot1.Time;
-
 public class MountainWalk {
 
 	public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class MountainWalk {
 		int heightDifference = 8;
 
 		int res = cellsVisited(areaMap,heightDifference);
-		System.out.println("Res: "+res);
+		System.out.println(res);
 	}
 
 	public static int cellsVisited(String[] areaMap, int heightDifference) {
