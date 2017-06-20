@@ -7,7 +7,6 @@ import java.util.Collections;
 public class FilipTheFrog {
 
 	public static void main(String[] args) {
-//		int[] positions = {4,7,1,3,5};
 		int[] positions = {393, 247, 507, 489, 459, 756, 152, 694, 224, 368, 704, 714, 948, 600, 206, 849, 64, 20, 231, 81, 397, 933, 566};
 		int L = 25;
 		int result = countReachableIslands(positions,L);

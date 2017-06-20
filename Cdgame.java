@@ -46,20 +46,4 @@ public class Cdgame {
 		}
 		return hashSet.size();
 	}
-	//topcoder
-	public static int rescount1(int[] a, int[] b) { 
-	    int sumA = 0, sumB = 0; 
-	    for (int i = 0; i < a.length; i++) { 
-	      sumA += a[i]; 
-	      sumB += b[i]; 
-	    } 
-	     
-	    HashSet<Integer> res = new HashSet<Integer>(); 
-	    for (int i : a) { 
-	      for (int j : b) { 
-	        res.add((sumA-i+j)*(sumB-j+i)); 
-	      } 
-	    } 
-	    return res.size(); 
-	  } 
 }
