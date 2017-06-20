@@ -8,8 +8,9 @@ public class BearPair {
 		System.out.println(result);
 	}
 
-	/* It does not seem correct to me but aas of the testing it passes all the tests
-	 * I think it needs to be checking for number from the last and not the corresponding number from last
+	// optimised
+	/* (It does not seem correct to me but aas of the testing it passes all the tests
+	 * I think it needs to be checking for number from the last and not the corresponding number from last)
 	*/ 
 	public static int bigDistance(String s) {
 		int max = -1;
