@@ -6,7 +6,7 @@ public class SwapAndArithmetic {
 
 	public static void main(String[] args) {
 		int[] x = {7,3,11,5,1,9};
-		String res = swap(x);
+		String res = able(x);
 		System.out.println(res);
 	}
 
