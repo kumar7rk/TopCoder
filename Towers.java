@@ -23,12 +23,12 @@ public class Towers {
 			System.out.println("Total hpT:"+total);
 			if (total<0) total = 0;
 			
-			double towersKilled = (double)total/(double)hpT;
+			double towersLeft = (double)total/(double)hpT;
 			
-			if ((int)towersKilled!=towersKilled) towersKilled= (int)towersKilled+1;
-			System.out.println("Towers Killed:"+towersKilled);
+			if ((int)towersLeft!=towersLeft) towersLeft= (int)towersLeft+1;
+			System.out.println("Towers Killed:"+towersLeft);
 			
-			myUnits -=(towersKilled*attackT);
+			myUnits -=(towersLeft*attackT);
 			++i;
 		}
 		if (total<=0) return i;
