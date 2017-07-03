@@ -11,7 +11,6 @@ public class NiceTable {
 	}
 
 	public static String isNice(String[] t) {
-		System.out.println(0>10);
 		for (int i = 0; i < t.length-1; i++) {
 			int count = 0;
 			for (int j = 0; j < t[0].length(); j++) 
