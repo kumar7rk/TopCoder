@@ -10,8 +10,6 @@ public class ExplodingRobots {
 		String instructions = "LULULULLLUULRULULULULULULLULULLULD";
 		String res = canExplode(x1, y1, x2, y2, instructions);
 		System.out.println(res);
-		
-
 	}
 
 	public static String canExplode(int x1, int y1, int x2, int y2, String instructions) {
