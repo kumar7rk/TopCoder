@@ -3,18 +3,13 @@ package TopCoder;
 public class PaperRockScisQuals {
 
 	public static void main(String[] args) {
-		String[] players = 
-//			{"PPRPS","RRRPR","SSPRS","SSPRR","PPRSP","SPRPS","SPRSP","PRSPR","PRSPR"}
-			{"RRRRR","PPPPP","SSSSS","SSSSS","RRRRR","RRRRR"}
-//			{"RRRRR","PPPPP","RRRRR","PPPPP"}
-		;
+		String[] players = {"PPRPS","RRRPR","SSPRS","SSPRR","PPRSP","SPRPS","SPRSP","PRSPR","PRSPR"};
 		int res = whoPasses(players);
 		System.out.println(res);
 	}
 
 	public static int whoPasses(String[] players) {
-//		double[] points = new double[players.length];
-		float[] points = new float[players.length];
+		double[] points = new double[players.length];
 		for (int i = 0; i < players.length; i++) {
 			for (int j = i+1; j < players.length; j++) {
 				int pointI = 0;
@@ -46,7 +41,6 @@ public class PaperRockScisQuals {
 		double max = Double.MIN_VALUE;
 		int loc = 0;
 		for (int i = 0; i < points.length; i++) {
-			System.out.println(points[i]);
 			if (points[i]>max) {
 				max = points[i];
 				loc = i;
@@ -54,5 +48,4 @@ public class PaperRockScisQuals {
 		}
 		return loc;
 	}
-
 }
