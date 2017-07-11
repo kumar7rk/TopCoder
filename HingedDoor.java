@@ -16,7 +16,6 @@ public class HingedDoor {
 		double r = reduction;
 		while(val>5.0){
 			val = val*(1/r); 
-			System.out.println(val);
 			res++;
 		}
 		return res;
