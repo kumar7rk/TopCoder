@@ -12,23 +12,18 @@ public class CuttingPoles {
 		System.out.println(res);
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static int countCuts(int[] poles) {
 		int res = 0;
 		int sum = 0;
 		for (Integer integer : poles) sum+=integer;
 		int average = sum/poles.length;
-		Integer[] pole = new Integer[poles.length];
-		for (int i = 0; i < pole.length; i++) pole[i] = poles[i];
 		while (true) {
-			Arrays.sort(pole);
+			Arrays.sort(poles);
 			
-			Set<Integer> set = new HashSet(Arrays.asList(pole));
-			if (set.size()==1) return res;
-			
-			int diff = pole[pole.length-1]-average;
-			pole[pole.length-1] = average;
-			pole[0]+= diff;
+			if (poles[poles.length-1]==average) return res;
+			int diff = poles[poles.length-1]-average;
+			poles[poles.length-1] = average;
+			poles[0]+= diff;
 			
 			res++;
 		}
