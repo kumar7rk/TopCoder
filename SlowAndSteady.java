@@ -44,5 +44,6 @@ public class SlowAndSteady {
 		System.out.println("Program termination completed");
 		
 		System.out.println("Total time for loading: "+totalTime+"\n Cheers to your patience");
+		System.out.println(totalTime>10000? "That's a long wait man":"");
 	}
 }
