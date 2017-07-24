@@ -27,7 +27,5 @@ public class CuttingPoles {
 			
 			res++;
 		}
-//		return res;
 	}
-
 }
