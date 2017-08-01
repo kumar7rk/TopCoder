@@ -10,7 +10,7 @@ public class LengthUnitCalculator {
 		System.out.println(result);
 	}
 
-	private static double calc(int amount, String fromUnit, String toUnit) {
+	public static double calc(int amount, String fromUnit, String toUnit) {
 		switch (fromUnit) {
 		case "mi": return mi(amount,toUnit);
 		case "ft": return ft(amount,toUnit);

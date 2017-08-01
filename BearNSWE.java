@@ -13,6 +13,7 @@ public class BearNSWE {
 		int x = 0;
 		int y = 0;
 		int sum = 0;
+
 		for (int i = 0; i < a.length; i++) {
 			sum+=a[i];
 			char c = dir.charAt(i);

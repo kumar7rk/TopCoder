@@ -8,11 +8,9 @@ public class MakingPairs {
 		System.out.println(pairs);
 
 	}
-	private static int get(int[] card) {
+	public static int get(int[] card) {
 		int pair = 0;
-		for (int i = 0; i < card.length; i++) {
-			pair+= card[i]/2;
-		}
+		for (int i = 0; i < card.length; i++) pair+= card[i]/2;
 		return pair;
 	}
 

@@ -1,11 +1,7 @@
 package TopCoder;
-
 public class CoinFlipsDiv2 {
-
 	public static void main(String[] args) {
-		String state = 
-				"THTTTTTTTTTTTTTHTTHTTTTTHHHTTTTHTTTTTTTTTT"	
-				;
+		String state = "THTTTTTTTTTTTTTHTTHTTTTTHHHTTTTHTTTTTTTTTT";
 		int res = countCoins(state);
 		System.out.println(res);
 	}
@@ -16,12 +12,8 @@ public class CoinFlipsDiv2 {
 			char c_1 = state.charAt(i-1);
 			char c1 = state.charAt(i);
 			char c2 = state.charAt(i+1);
-		
-			if (c1!=c2 || c1!=c_1) {
-				count++;
-			}
+			if (c1!=c2 || c1!=c_1) count++;
 		}
-		
 		return count;
 	}
 }

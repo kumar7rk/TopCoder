@@ -1,21 +1,12 @@
 package TopCoder;
 
-import icsV1dot1.Time;
-
 public class Reppity{
 	public static void main(String[]args){
-		
-		String input =
-				"ABABA"
-				;
-		Time.startTime();
+		String input = "ABABA";
 		int res = longest(input);
 		System.out.println(res);
-		Time.endTime();
-		
 	}
 	public static int longest(String input){
-		
 		int x = input.length();
 		int max = 0;
 		String maxS = "";

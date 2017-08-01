@@ -10,7 +10,7 @@ public class RelationClassifier {
 		System.out.println(isBijection(domain, range));
 	}
 
-	private static String isBijection(int[] domain, int[] range) {
+	public static String isBijection(int[] domain, int[] range) {
 		for (int i = 0; i < domain.length; i++) {
 			for (int j = i+1; j < domain.length; j++) {
 				if (domain[i] ==  domain[j] || range[i] == range[j]) {

@@ -8,7 +8,6 @@ public class BearPasswordAny {
 	}
 	
 	public static String findPassword(int[] x) {
- 
         int N = x.length;
         
         if(x[0] != N) return "";

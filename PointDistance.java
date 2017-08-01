@@ -3,7 +3,6 @@ package TopCoder;
 import java.util.Random;
 
 public class PointDistance {
-
 	public static void main(String[] args) {
 		int x1 = 3;
 		int y1 = 2;
@@ -11,10 +10,8 @@ public class PointDistance {
 		int y2 = 2;
 		int[] result = findPoint(x1,y1,x2,y2);
 		System.out.print(result[0]+" "+ result[1]);
-
 	}
-
-	private static int[] findPoint(int x1, int y1, int x2, int y2) {
+	public static int[] findPoint(int x1, int y1, int x2, int y2) {
 		int[] result = new int[2];
 		while (true) {
 			Random  r = new Random();
@@ -29,10 +26,5 @@ public class PointDistance {
 				return result;
 			}
 		}
-	}
-	//topcoder
-	public static int[] findPoint1(int x1, int y1, int x2, int y2) {
-		int[]p = {(x2>x1)?x2+1:x2-1,y2};
-		return p;
 	}
 }

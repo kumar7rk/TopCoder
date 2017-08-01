@@ -15,12 +15,8 @@ public class PikachuEasy {
 			if (word.contains(speak[1])) word = word.replaceFirst(speak[1],"XX");
 			if (word.contains(speak[2])) word = word.replaceFirst(speak[2], "XXX");
 		}
-		
-		for (int i = 0; i < word.length(); i++) {
-			newWord = newWord.concat("X");
-		}
+		for (int i = 0; i < word.length(); i++) newWord = newWord.concat("X");
 		if (!word.equals(newWord)) return "NO";
-		
 		return "YES";
 	}
 }

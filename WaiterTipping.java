@@ -1,12 +1,10 @@
 package TopCoder;
 
 public class WaiterTipping {
-
 	public static void main(String[] args) {
 		int total = 4866;
 		int taxPecent = 19;
 		int money = 13398;
-
 		int res = maxPercent(total, taxPecent, money);
 		System.out.println(res);
 	}

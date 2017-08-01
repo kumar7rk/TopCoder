@@ -8,7 +8,7 @@ public class DevuAndGame {
 		System.out.println(result);
 	}
 
-	private static String canWin(int[] nextLevel) {
+	public static String canWin(int[] nextLevel) {
 		int s = 0;
 		for (int i = 0; i < nextLevel.length; i++) {
 			s = nextLevel[s];

@@ -1,7 +1,5 @@
 package TopCoder;
 
-import icsV1dot1.Time;
-
 public class HighScore {
 
 	public static void main(String[] args) {
@@ -13,28 +11,15 @@ public class HighScore {
 	}
 	public static int getRank(int[] scores, int newscore, int places){
 		int res = -1;
-		if (newscore<scores[scores.length-1]) {
-			return scores.length+1;
-		}
-		if (newscore==scores[scores.length-1] && scores.length==places) {
-			return -1;
-		}
+		if (newscore<scores[scores.length-1]) return scores.length+1;
+		if (newscore==scores[scores.length-1] && scores.length==places) return -1;
 		for (int i = 0; i < scores.length-1; i++) {
 			if (newscore <= scores[i] && newscore >=scores[i+1]) {
-				if (newscore==scores[i]) {
-					return i+1;
-				}
-				if (newscore==scores[i+1] && i+1 < scores.length-1) {
-					return i+2;
-				}
-				
-				else if (newscore==scores[i+1] && i+1 == scores.length-1) {
-					return -1;
-				}
-				else
-					return i+2;
+				if (newscore==scores[i]) return i+1;
+				if (newscore==scores[i+1] && i+1 < scores.length-1) return i+2;
+				else if (newscore==scores[i+1] && i+1 == scores.length-1) return -1;
+				else return i+2;
 			}
-		
 		}
 		return res;
 	}

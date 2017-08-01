@@ -3,23 +3,16 @@ package TopCoder;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import icsV1dot1.Time;
-
 public class Istr {
 
 	public static void main(String[] args) {
-		Time.startTime();
-//		String s = "wersrsresesrsesrawsdsw";
-//		String s = 	"maoonescoqgalisojljkdookofjpelhmnhooqbodjio";
-//		int k = 11;
 		String s = "jeonkhmoibnkojlionoijlhdcgoooollnfomomlnojigjgmebo";
 		int k = 21;
 		int result = count(s,k);
 		System.out.println(result);
-		Time.endTime();
 	}
 
-	private static int count(String s, int k) {
+	public static int count(String s, int k) {
 		ArrayList<Integer> arrayList = new ArrayList<>();
 		int[] count = new int[26];
 		int result = 0;

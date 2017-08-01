@@ -2,13 +2,11 @@ package TopCoder;
 
 public class TextCompressor {
 	public static void main(String [] args){
-		
 		String sourceText = "ABABA";
 		String res = longestRepeat(sourceText);
 		System.out.println(res);
 	}
 	public static String longestRepeat(String sourceText){
-		
 		int x = sourceText.length();
 		int max = 0;
 		String maxS = "";

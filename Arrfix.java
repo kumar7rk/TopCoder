@@ -8,7 +8,6 @@ public class Arrfix {
 		int[]F = {2};
 		int result = mindiff(A,B,F);
 		System.out.println(result);
-		
 	}
 
 	private static int mindiff(int[] a, int[] b, int[] f) {

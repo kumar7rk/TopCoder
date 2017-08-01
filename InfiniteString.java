@@ -9,7 +9,7 @@ public class InfiniteString {
 		System.out.println(result);
 	}
 
-	private static String equal(String s, String t) {
+	public static String equal(String s, String t) {
 		String a = "",b="";
 		int tl = t.length();
 		int sl = s.length();

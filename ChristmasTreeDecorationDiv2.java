@@ -13,9 +13,7 @@ public class ChristmasTreeDecorationDiv2 {
 	private static int solve(int[] col, int[] x, int[] y) {
 		int counter = 0;
 		for (int i = 0; i < y.length; i++) {
-			if (col[x[i]-1]!=col[y[i]-1]) {
-				counter++;
-			}
+			if (col[x[i]-1]!=col[y[i]-1]) counter++;
 		}
 		return counter;
 	}

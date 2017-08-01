@@ -1,15 +1,9 @@
 package TopCoder;
 
 public class RoboFactory {
-
 	public static void main(String[] args) {
-
-		int[] query = 
-			{835, 681, 977, 455, 725, 71, 809, 559, 157, 603, 833, 905, 441, 375, 563, 885, 963, 81, 837, 797, 203}
-		;
-		String[] answer = 
-			{"Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd"}			
-		;
+		int[] query = {835, 681, 977, 455, 725, 71, 809, 559, 157, 603, 833, 905, 441, 375, 563, 885, 963, 81, 837, 797, 203};
+		String[] answer = {"Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd", "Odd"};
 		int res = reveal(query, answer);
 		System.out.println(res);
 	}
@@ -23,11 +17,9 @@ public class RoboFactory {
 			boolean stat = answer[i].startsWith("O");
 			if ((num && !stat)|| (!num && stat)) return i;
 		}
-	for (int i = 0; i < answer.length-1; i++)
+		for (int i = 0; i < answer.length-1; i++)
 			if (answer[i].startsWith("E"))
 			return -1;
 		return 0;
 	}
-
-	
 }

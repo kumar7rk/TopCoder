@@ -2,7 +2,6 @@ package TopCoder;
 
 public class BlackjackWinner{
 	public static void main(String[]args){
-		
 		int bet = 26;
 		int dealer = 21;
 		int dealerBlackjack = 1;
@@ -21,9 +20,7 @@ public class BlackjackWinner{
 			else return (int)(bet*1.5);
 		}
 		if(player == dealer && player <=21) return 0;
-		
 		if (player > 21) return -bet;
-
 		return 100;
 	}
 }

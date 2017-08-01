@@ -2,7 +2,6 @@ package TopCoder;
 
 public class SearchBox{
 	public static void main(String[]args){
-		
 		String text = "All in all youre just another brick in the wall";
 		String search = "just";
 		String wholeWord = "Y";
@@ -23,8 +22,7 @@ public class SearchBox{
 		}
 		else{
 			text = text.substring(start);
-			if(text.contains(search))
-				return start+text.indexOf(search);
+			if(text.contains(search)) return start+text.indexOf(search);
 		}
 		return -1;
 	}

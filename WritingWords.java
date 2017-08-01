@@ -1,4 +1,5 @@
 package TopCoder;
+
 public class WritingWords{
 	public static void main(String[]args){
 		String word = "CFIRJCDDSOZOYVEGURFWCSFMOXEQMRJOWRGHWLKOBMEAHKGCCN";

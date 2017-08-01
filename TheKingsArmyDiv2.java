@@ -1,15 +1,13 @@
 package TopCoder;
 
 public class TheKingsArmyDiv2 {
-
 	public static void main(String[] args) {
-		String[]state = 	
-			{"SSSSS", "SSSSS", "SSSSH"}	;
+		String[]state = {"SSSSS", "SSSSS", "SSSSH"}	;
 		int result = getNumber(state);
 		System.out.println(result);
 	}
 
-	private static int getNumber(String[] state) {
+	public static int getNumber(String[] state) {
 		int sL = state.length;
 		int siL = state[0].length(); 
 		for (int i = 0; i < sL; i++)

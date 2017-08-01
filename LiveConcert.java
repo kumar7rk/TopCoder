@@ -17,19 +17,14 @@ public class LiveConcert {
 		System.out.println(result);
 	}
 
-	private static int maxHappiness(int[] h, String[] s) {
+	public static int maxHappiness(int[] h, String[] s) {
 		int hapiness = 0;
 		HashMap<String, Integer> hashMap = new HashMap<>();
 		for (int i = 0; i < s.length; i++) {
-			if (hashMap.containsKey(s[i])) {
-				h[i] = hashMap.get(s[i])<h[i] ? h[i] : hashMap.get(s[i]) ;
-			}
+			if (hashMap.containsKey(s[i])) h[i] = hashMap.get(s[i])<h[i] ? h[i] : hashMap.get(s[i]) ;
 			hashMap.put(s[i], h[i]);
 		}
-		for (Entry<String, Integer> entry : hashMap.entrySet()){
-//		    System.out.println(entry.getKey() + "/" + entry.getValue());
-		    hapiness+=entry.getValue();
-		}
+		for (Entry<String, Integer> entry : hashMap.entrySet()) hapiness+=entry.getValue();
 		return hapiness;
 	}
 }
