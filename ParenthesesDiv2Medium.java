@@ -7,7 +7,8 @@ import java.util.List;
 public class ParenthesesDiv2Medium {
 
 	public static void main(String[] args) {
-		int[] i = correct1(s);
+		String s = "";
+		int[] i = correct(s);
 		System.out.print("{");
 		for (int j : i) System.out.print(j+" ");
 		System.out.print("}");

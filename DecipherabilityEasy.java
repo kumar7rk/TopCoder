@@ -1,51 +1,21 @@
 package TopCoder;
 
-import icsV1dot1.Time;
-
 public class DecipherabilityEasy {
 
 	public static void main(String[] args) {
-
-		Time.startTime();
-		String s = "aabccccbabaabacaab";
-		String t = "aabccccbabaaacaab";
-		String result = check1(s,t);
+		String s = "sunuke";
+		String t = "snuke";
+		String result = check(s,t);
 		System.out.println(result);
-		Time.endTime();
 	}
-
-	private static String check(String s, String t) {
-		int counter = 0;
+	public static String check(String s, String t) {
 		if (s.length()-1!=t.length()) return "Impossible";
-		int i = 0;
-		int j = 0;
-		boolean bool = true;
-		while (bool && i<s.length()) {
-			char c1 = s.charAt(i);
-			char c2 = t.charAt(j);
-			if(counter == 2){
-				bool = false;
-				return "Impossible";
-			}
-			if (c1!=c2) {
-				counter++;
-				i++;
-			}
-			else if (c1==c2) {
-				i++;
-				j++;
-			}
-			
+		for (int i = 0; i < s.length(); i++) {
+			String s1 = "";
+			s1 += s.substring(0,i);
+			s1 += s.substring(i+1);
+			if (s1.equals(t)) return "Possible";
 		}
-		return "Possible";	
+		return "Impossible";
 	}
-	public static String check1(String s, String t) {
-	    
-	    String r = "Possible", n = "Impossible";
-	    for(int i=0;i<s.length();i++){
-	      String x = s.substring(0,i) + s.substring(i+1);
-	      if(x.equals(t)) return r;
-	    }
-	    return n;
-	  }
 }

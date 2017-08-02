@@ -1,6 +1,6 @@
 package TopCoder;
 
-public class BlockTower{
+public class BlockTower {
 	public static void main(String[]args){
 		int []blockHeights = {24, 20, 3, 9, 20, 12, 27, 16, 30, 29, 43, 8, 27, 38, 42, 1, 25, 34, 8, 23, 27, 22, 47, 39, 41, 41, 44, 12, 24, 36, 19, 37, 46, 9, 27, 22, 34, 12, 46, 41, 36, 42, 11, 45, 20, 2, 27, 46, 50, 19};
 		int res = getTallest(blockHeights);
