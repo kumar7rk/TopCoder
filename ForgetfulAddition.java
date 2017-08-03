@@ -1,6 +1,5 @@
 package TopCoder;
 
-import static java.lang.Math.*;
 public class ForgetfulAddition {
 
 	public static void main(String[] args) {

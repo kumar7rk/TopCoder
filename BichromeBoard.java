@@ -13,7 +13,7 @@ public class BichromeBoard {
 	private static String ableToDraw(String[] board) {
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board.length; j++) {
-				char[] c1 = board[i].toCharArray();
+//				char[] c1 = board[i].toCharArray();
 			}
 		}
 		return "Possible";

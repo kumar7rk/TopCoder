@@ -15,8 +15,8 @@ public class CustomerStatistics {
 		for (String s: res) System.out.println(s);
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static String[] reportDuplicates(String[] customerNames) {
-		int count = 0;
 		HashMap<String, Integer> hashMap = new HashMap<>();
 		for (String s : customerNames) {
 			if (hashMap.containsKey(s)) hashMap.put(s, hashMap.get(s)+1);

@@ -11,7 +11,6 @@ public class Target {
 
 	public static String[] draw(int n) {
 		char [][]res = new char [n][n];
-		int ns = n/4+1;
 		int s = 0;
 		int e = n-1;
 

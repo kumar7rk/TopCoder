@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import javax.swing.plaf.FontUIResource;
-
 public class TeamSplit {
 
 	public static void main(String[] args) {

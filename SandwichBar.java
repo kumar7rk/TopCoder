@@ -10,7 +10,6 @@ public class SandwichBar {
 	}
 
 	public static int whichOrder(String[] available, String[] orders) {
-		int index = 0;
 		for (int i = 0; i < orders.length; i++) {
 			String s = orders[i];
 			String[] ind = s.split(" "); 

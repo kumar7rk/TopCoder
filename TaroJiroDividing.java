@@ -18,12 +18,13 @@ public class TaroJiroDividing {
 		while (a%2==0) arrayListA.add(a/=2);
 		while (b%2==0) arrayListB.add(b/=2);
 		int count = 0;
-		if (arrayListA.size()<arrayListB.size()){
+		if (arrayListA.size()<=arrayListB.size()){
 			for (Integer integer : arrayListA) if (arrayListB.contains(integer)) count++;
 		}
-		else if (arrayListB.size()<=arrayListA.size()){
+		else{
 			for (Integer integer : arrayListB) if (arrayListA.contains(integer)) count++;
 		}
+		
 		return count;
 	}
 }

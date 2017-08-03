@@ -2,13 +2,8 @@ package TopCoder;
 
 public class ReadingBooks {
 	public static void main(String[] args) {
-		String [] readParts1 = {"introduction", "story", "introduction", "edification", "story",
-				 "story", "edification", "edification", "edification", "introduction",
-				 "introduction", "edification", "story", "introduction", "story",
-				 "edification", "edification", "story", "introduction", "edification",
-				 "story", "story", "edification", "introduction", "story"};
 		String[] readParts = {"introduction", "story", "introduction", "edification", "story", "introduction"};
-		int res = countBooks(readParts1);
+		int res = countBooks(readParts);
 		System.out.println(res);
 	}
 	public static int countBooks(String[]readParts){

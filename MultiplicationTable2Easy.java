@@ -1,7 +1,6 @@
 package TopCoder;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MultiplicationTable2Easy {
 
