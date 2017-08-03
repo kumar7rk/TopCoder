@@ -16,7 +16,7 @@ public class InfiniteString {
 		for (int i = 0; i < tl; i++) a+=s;
 		for (int i = 0; i < sl; i++) b+=t;
 		if (a.equals(b)) return "Equal";
-		return "Not Equal";
+		return "Not equal";
 	}
 
 }
