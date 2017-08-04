@@ -2,18 +2,21 @@ package TopCoder;
 
 public class EggCartons{
 	public static void main(String[] args){
-		int n = 100;
+		int n = 60;
 		int res = minCartons(n);
 		System.out.println(res);
 	}
 	public static int minCartons(int n){
+		if (n<6) return -1;
 		int cartons = -1;
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				cartons = i*6 + j*8;
-				if (cartons == n) return i+j;
+		int min = Integer.MAX_VALUE;
+		for (int i = 0; i <= 12; i++) {
+			for (int j = 0; j <= 16; j++) {
+				cartons = i*8 + j*6;
+				if (cartons == n) min = Math.min(min, i+j);
 			}
 		}
-		return cartons;
+		if (min==Integer.MAX_VALUE) return -1;
+		return min;
 	}
 }
