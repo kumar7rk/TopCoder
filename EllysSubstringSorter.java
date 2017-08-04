@@ -6,20 +6,23 @@ import java.util.Comparator;
 public class EllysSubstringSorter {
 
 	public static void main(String[] args) {
-		String S = "MZJSVLKIGNBLNFKUYBMXKRIXGTIIRSFKY";
-		int L = 16;
+		String S = 
+				"TOPCODER"
+//				"MZJSVLKIGNBLNFKUYBMXKRIXGTIIRSFKY"
+				;
+		int L = 4;
 		String res = getMin(S,L);
-		System.out.println(res);
+		System.out.println("RES: "+res);
 	}
 
 	public static String getMin(String S, int L) {
-		String res = S;
+		String temp = "";
 		String best = S;
 		for (int i = 0; i < S.length()-L+1; i++) {
 			String S1 = S.substring(i,i+L);
 			String str = sortString(S1);
-			res = S.replaceAll(S1, str);
-			if (best.compareTo(res)>0) best = res;
+			temp = S.replaceFirst(S1, str);
+			if (best.compareTo(temp)>0) best = temp;
 		}
 		return best;
 	}
