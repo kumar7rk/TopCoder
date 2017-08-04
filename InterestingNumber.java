@@ -3,14 +3,13 @@ package TopCoder;
 public class InterestingNumber {
 	
 	 public static void main(String[] args) {
-		String x = "64200246";
+		String x = "1001";
 		String res = isInteresting(x);
 		System.out.println(res);
 	}
 	public static String isInteresting(String x){
 		boolean []checked = new boolean[10];
-		int count = counter(x);
-		if (count==0) return "Not Interesting";
+		if (counter(x)==0) return "Not interesting";
 		char c = '2';
 		int index = -1;
 		for (int i = 0; i < x.length(); i++) {
@@ -19,7 +18,7 @@ public class InterestingNumber {
 			int num = c-'0';
 			if (!checked[num]){
 				checked[num] = true;
-				if ((index -1-i) != (num)) return "Not Interesting";
+				if ((index -1-i) != (num)) return "Not interesting";
 			}
 		}		
 		return "Interesting";
