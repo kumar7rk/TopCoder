@@ -1,48 +1,50 @@
 package TopCoder;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class ListeningSongs {
 
 	public static void main(String[] args) {
-		int []durations1 = {100, 200, 300, 400, 500, 600};
-		int []durations2 = {100, 200};
-		int minutes = 1000;
+		int []durations1 = 
+				{196,147,201,106,239,332,165,130,205,221,248,108,60}
+		;
+		int []durations2 = 
+			{280,164,206,95,81,383,96,255,260,244,60,313,101}
+		;
+		int minutes = 60;
 		int T = 3;
 		int res = listen(durations1,durations2, minutes, T);
 		System.out.println(res);
 	}
 	public static int listen(int[] durations1, int[] durations2, int minutes, int T){
-		int res = 0;
-		int total_time = minutes*60;
-		int rem = 0;
-		if (T> durations1.length || T>durations2.length) return -1;
-		int array[] = new int[durations2.length+durations1.length];
-		array = combineString(durations1,durations2,T);
+		minutes *=60;
+		int total = 0; 
+		if (T>durations1.length || T>durations2.length) return -1;
 		Arrays.sort(durations1);
 		Arrays.sort(durations2);
-		Arrays.sort(array);
-		int sum = 0;
-		for (int i = 0; i < T; i++) sum+=durations1[i]+durations2[i];
-		if (sum > total_time) return -1;
-		if (sum == total_time) return 2*T;
-		res = 2*T;
-		rem = total_time-sum;
-		for (int j = 0; j < array.length; j++) {
-			if (array[j] == 0) continue;
-			if (rem>=array[j]) {
-				rem-= array[j];
-				res++;
-			}
-			else return res; 
+		for (int i = 0; i < T; i++) {
+			total+=durations1[i];
+			total+=durations2[i];
+			if (total>minutes) return -1;
 		}
-		return res;
+		if (total==minutes) return 2*T;
+		
+		ArrayList<Integer> arrayList = new ArrayList<>();
+
+		for (int i = T; i < durations1.length; i++) 
+			arrayList.add(durations1[i]);
+		for (int i = T; i < durations2.length; i++) 
+			arrayList.add(durations2[i]);
+		Collections.sort(arrayList);
+		int counter = 2*T;
+		while (total<minutes && arrayList.size()>0) {
+			total+=arrayList.get(0);
+			if (total>minutes) return counter;
+			arrayList.remove(0);
+			counter++;
+		}
+		return counter;
 	}
-	public static int[] combineString(int[] durations1, int[] durations2, int T){
-        int length = durations1.length + durations2.length;
-        int[] result = new int[length];
-        System.arraycopy(durations1, T, result, T, durations1.length-T);
-        System.arraycopy(durations2, T, result, durations1.length, durations2.length-T);
-        return result;
-    }
 }
