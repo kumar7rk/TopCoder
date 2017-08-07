@@ -11,16 +11,13 @@ public class BlackjackWinner{
 		System.out.println(res);
 	}
 	public static int winnings(int bet, int dealer, int dealerBlackjack, int player, int playerBlackjack){
+
 		if(dealerBlackjack == 1 && playerBlackjack == 1) return 0;
-		if(dealerBlackjack == 1 && playerBlackjack == 0) return -bet;
 		if(dealerBlackjack == 0 && playerBlackjack == 1) return (int)(bet*1.5);
-		
-		if((player > dealer && player <=21) || (dealer > 21 && player <=21)){
-			if(playerBlackjack == 0) return bet;
-			else return (int)(bet*1.5);
-		}
-		if(player == dealer && player <=21) return 0;
-		if (player > 21) return -bet;
-		return 100;
+		if(dealerBlackjack==1 && playerBlackjack==0) return -bet;
+		if(player > 21) return -bet;
+		if(player == dealer) return 0;
+		if((player > dealer) || dealer > 21) return bet;
+		return -bet;
 	}
 }
