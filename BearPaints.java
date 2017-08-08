@@ -10,10 +10,8 @@ public class BearPaints {
 	}
 	public static long maxArea(int w, int h, long m) {
 		long max = 0;
-		for (int i = w,count = 0; i >0 && count<10000 ; i--){
+		for (int i = w; i >0 ; i--) 
 			max = Math.max(Math.min(h,(m/i))*i, max);
-			count++;
-		}
 		return max;
 	}
 }
