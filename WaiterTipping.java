@@ -2,17 +2,20 @@ package TopCoder;
 
 public class WaiterTipping {
 	public static void main(String[] args) {
-		int total = 4866;
-		int taxPecent = 19;
-		int money = 13398;
+		int total = 226;
+		int taxPecent = 48;
+		int money = 584;
 		int res = maxPercent(total, taxPecent, money);
 		System.out.println(res);
 	}
 
 	public static int maxPercent(int total, int taxPecent, int money) {
-		int bill_and_taxes = 0;
-		bill_and_taxes = (int)(total + (taxPecent*total/100));
-		long res = (long) Math.ceil((long)(money-bill_and_taxes)*100/total);
-		return (int)res;
+		int max = -1;
+		for (int i = 0; i <money; i++) {
+			double tot = total + (taxPecent*total/100) + Math.floor(total*i/100);
+			if (tot<=money) max = max<i?i:max;
+			if (tot>=money) return max;
+		}
+		return -1;
 	}
 }
