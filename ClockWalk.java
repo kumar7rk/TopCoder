@@ -23,6 +23,7 @@ public class ClockWalk {
 					hr=12-hr;
 				}
 			}
+			if (hr==0) hr = 12;
 			System.out.println(hr);
 		}
 		return hr;
