@@ -1,7 +1,5 @@
 package TopCoder;
 
-import java.util.Arrays;
-
 public class CatchTheBeatEasy {
 
 	public static void main(String[] args) {
@@ -11,32 +9,26 @@ public class CatchTheBeatEasy {
 		System.out.println(res);
 	}
 	public static String ableToCatchAll(int[] x, int[] y) {
-//		int minY = y[0];
-		int locY = 0;
-		int current = 0;
-		boolean b[] = new boolean[x.length];
-		Arrays.fill(b, false);
-		int count = 0;
-		while(count<x.length){
-			int minY = Integer.MAX_VALUE;
-			// we have the next smallest value of y
-			for (int i = 0; i < y.length; i++) {
-				if (minY>y[i]&&!b[i]) {
-					b[0] = true; 
-					minY = y[i];
-					locY = i;
-					b[i] = true;
+		int tempY = 0;
+		int tempX = 0;
+		for (int i = 0; i < y.length; i++) {
+			for (int j = i+1; j < y.length; j++) {
+				if (y[i]>y[j]) {
+					tempY = y[i];
+					y[i] = y[j];
+					y[j] = tempY;
+					tempX = x[i];
+					x[i] = x[j];
+					x[j] = tempX;
 				}
 			}
-			System.out.println("Smallest y value is "+minY);
-			// get the corresponding x value and then use the formula
-			int diff = Math.abs(current-x[locY]);
-			System.out.println(diff+ " " + y[locY]);
-			if (diff<y[locY]-count) return "Not able to catch";
-			else {
-				current = x[locY];
-			}
-			count++;
+		}
+		int s = 0;
+		int t = 0;
+		for (int i = 0; i < y.length; i++) {
+			if (y[i]-s<Math.abs(x[i]-t)) return "Not able to catch";
+			s=y[i];
+			t=x[i];
 		}
 		return "Able to catch"; 
 	}
