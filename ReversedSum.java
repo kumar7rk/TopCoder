@@ -10,25 +10,18 @@ public class ReversedSum {
 	}
 
 	public static int getReversedSum(int x, int y) {
-		int rev = 0;
-		int rev1 = 0;
-		int rev2 = 0;
-		
-		while (x!= 0){
-		    rev = rev*10 + x % 10;
-		    x /= 10;
-		}
-		while (y != 0){
-		    rev1 = rev1*10 + y % 10;
-		    y /= 10;
-		}
+		int rev = reverse(x);
+		int rev1 = reverse(y);
 		int sum = rev+rev1;
-		while (sum != 0){
-		    rev2 = rev2*10 + sum % 10;
-		    sum /= 10;
-		}
-		
-		return rev2;
+		int res = reverse(sum);
+		return res;
 	}
-
+	private static int reverse(int num){
+		int r = 0;
+		while (num!= 0){
+		    r = r*10 + num % 10;
+		    num /= 10;
+		}
+		return r;
+	}
 }
