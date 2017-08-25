@@ -17,15 +17,18 @@ public class DistinctGridEasy {
 
 	public static String checkGrid(int n, int k, int[] grid) {
 		int start = 0;
+		int start1 = 0;
 		while(start<grid.length){
-			HashSet<Integer> count = new HashSet<>();
-			for (int j = start; j < start+n; j++) {
-				count.add(grid[j]);
-			}
-			if (count.size()!=k) {
-				return "Bad";
-			}
+			HashSet<Integer> row = new HashSet<>();
+			for (int j = start; j < start+n; j++) row.add(grid[j]);
+			if (row.size()!=k) return "Bad";
 			start+=n;
+		}
+		while(start1<n){
+			HashSet<Integer> column = new HashSet<>();
+			for (int i = start1; i < grid.length; i+=start1) column.add(grid[i]);
+			start1++;
+			if (column.size()!=k) return "Bad";
 		}
 		return "Good";
 	}
