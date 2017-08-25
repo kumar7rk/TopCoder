@@ -13,5 +13,4 @@ public class InverseFactoring {
 		Arrays.sort(factors);
 		return factors[0]*factors[factors.length-1];
 	}
-
 }
