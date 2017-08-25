@@ -12,5 +12,4 @@ public class EyeDrops {
 		if(sleepTime>24/k) return (24-sleepTime)*60/(k-1);
 		return 1440/k;
 	}
-
 }
