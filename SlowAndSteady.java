@@ -1,3 +1,12 @@
+//call this method-
+/*
+		try {
+			SlowAndSteady.WinsTheRace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+*/
+
 package TopCoder;
 import java.util.Random;
 
