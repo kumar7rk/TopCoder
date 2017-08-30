@@ -1,7 +1,5 @@
 package TopCoder;
 
-import java.util.ArrayList;
-
 public class MinProduct {
 
 	public static void main(String[] args) {
@@ -15,7 +13,33 @@ public class MinProduct {
 	}
 
 	public static long findMin(int[] amount, int blank1, int blank2) {
-		ArrayList<Integer> arrayList = new ArrayList<>();
+		int b1 = blank1; 
+		int b2 = blank2;
+		if (blank1>blank2) {
+			b1 = blank2;
+			b2 = blank1;
+		}
+		if (amount[0]>=b1) return 0;
+		long a = 0;
+		long b = 0;
+		int last = b1+b2-amount[0];
+		int count = 1;
+		for (int i = 0; i < last; i++) {
+			while(amount[count]==0)
+				count++;
+			if (i%2==0 && amount[0]<b1){
+				a = a*10+count;
+				amount[0]++;
+			}
+			else b = b*10+count;
+			amount[count]--;
+		}
+		return a*b;
+	}
+
+}
+/*
+ArrayList<Integer> arrayList = new ArrayList<>();
 		for (int i = 0; i < amount.length; i++) 
 			for (int j = 0; j < amount[i]; j++) arrayList.add(i);
 		
@@ -23,7 +47,8 @@ public class MinProduct {
 		System.out.println();
 		long mul = 1;
 		
-		int [] taken = new int[blank1+blank2];
+//		int [] taken = new int[blank1+blank2];
+		
 		for (int i = 0; i < blank1+blank2-1; i++) {
 			String A = "";
 			String B = "";
@@ -37,7 +62,5 @@ public class MinProduct {
 			mul = Long.parseLong(A)*Long.parseLong(B);
 			System.out.println(mul);
 		}
-		return 0;
-	}
-
-}
+		return 0; 
+ */
