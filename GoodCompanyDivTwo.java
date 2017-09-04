@@ -1,4 +1,4 @@
-// package TopCoder;
+package TopCoder;
 import java.util.ArrayList;
 public class GoodCompanyDivTwo{
 	public static void main(String[] args){
@@ -18,11 +18,11 @@ public class GoodCompanyDivTwo{
 			ArrayList<Integer> arrayList1 = new ArrayList<Integer>();
 			boolean flag = true;
 			arrayList.add(i);
-			for(int j = 1; j< superior.length;j++){
+			for(int j = 1; j< superior.length;j++) 
 				if(superior[j]==i) arrayList.add(j);
-			}
+			
 			for(int j = 0;j<arrayList.size();j++){
-				if(!arrayList1.contains(workType[arrayList.get(j)])) arrayList1.add(workType[j]);
+				if(!arrayList1.contains(workType[arrayList.get(j)])) arrayList1.add(workType[arrayList.get(j)]);
 				else {
 					flag = false;
 					break;
