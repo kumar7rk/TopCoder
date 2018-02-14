@@ -1,14 +1,15 @@
 public class HalvingEasy{
 	
 	static int counter;
-	public static count(int[] S, int T){
+	public static int count(int[] S, int T){
 		
 		for(int s : S)
 			while(s>0){
 				s/=2;
-				if(S==T)
+				if(s==T)
 					counter++;
 			}
+        return counter;
 	}
 	
 }
